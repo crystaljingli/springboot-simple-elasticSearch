@@ -154,6 +154,8 @@ public class EsController {
        List<Map<String, Object>> result = new ArrayList<>();
        for(SearchHit hit : searchResponse.getHits()){
            result.add(hit.getSource());
+
+
        }
         return new ResponseEntity(result,HttpStatus.OK);
     }
